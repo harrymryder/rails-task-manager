@@ -1,0 +1,10 @@
+<%= @task.title %>
+<p><%= @task.details %></p>
+
+<%= link_to "Delete", destroy_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
+<div class="btn btn-primary"> <%= link_to "Edit", edit_task_path(@task) %> </div>
+
+<div class="btn btn-danger"> <%= link_to "Return to list", tasks_path %> </div>
